@@ -1,0 +1,22 @@
+{
+  "name": "@lidcore/bs-redis",
+  "version": "0.0.1",
+  "sources": [
+    "src",
+    {
+      "dir": "examples",
+      "public": []
+    },
+    {
+      "dir": "__tests__",
+      "type": "dev"
+    }
+  ],
+  "bs-dependencies": ["bs-callback"],
+  "bs-dev-dependencies": ["bs-tape"],
+  "warnings": {
+    "error": "+101"
+  },
+  "refmt": 3,
+  "namespace": true
+}

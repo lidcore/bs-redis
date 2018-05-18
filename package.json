@@ -1,0 +1,39 @@
+{
+  "name": "@lidcore/bs-redis",
+  "description": "bucklescript bindings for redis",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "bsb -make-world",
+    "start": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "npm run build && tape lib/js/__tests__/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lidcore/bs-redis.git"
+  },
+  "homepage": "https://github.com/lidcore/bs-redis.git",
+  "bugs": "https://github.com/lidcore/bs-redis/issues",
+  "keywords": [
+    "bucklescript",
+    "database",
+    "redis",
+    "transaction",
+    "pipelining",
+    "performance",
+    "queue",
+    "nodejs",
+    "pubsub",
+    "backpressure"
+  ],
+  "author": "LIDCORE IT <it@lidcore.com>",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "bs-platform": "^3.0.0",
+    "bs-tape": "^0.2.1"
+  },
+  "dependencies": {
+    "bs-callback": "^1.4.1",
+    "redis": "^2.8.0"
+  }
+}
