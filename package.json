@@ -6,7 +6,7 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "test": "npm run build && tape lib/js/__tests__/**/*.js"
+    "test": "npm run build && tape lib/js/tests/**/*.js"
   },
   "repository": {
     "type": "git",

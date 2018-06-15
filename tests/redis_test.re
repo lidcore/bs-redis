@@ -24,3 +24,25 @@ test("get/set", t => {
     ),
   );
 });
+
+test("setnx sanity check", t => {
+  t.plan(1);
+  let client = Redis.init();
+  Callback.finish(
+    Redis.setnx(client, "pingnx", "pong")
+    >> (
+      _ =>
+        Redis.get(client, "pingnx")
+        >> (
+          res =>
+            Redis.quit(client)
+            >> (
+              _ => {
+                t.equalStr(res, "pong");
+                Callback.return();
+              }
+            )
+        )
+    ),
+  );
+});
