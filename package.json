@@ -30,7 +30,7 @@
   "license": "BSD-2-Clause",
   "devDependencies": {
     "bs-platform": "=3.1.5",
-    "bs-tape": "=0.2.1"
+    "bs-tape": "=0.3.0"
   },
   "dependencies": {
     "bs-async-monad": "=1.0.0",
