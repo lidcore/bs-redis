@@ -1,22 +1,23 @@
-open BsCallback;
+open BsAsyncMonad;
+open BsAsyncMonad.Callback;
 
 open Tape;
 
 test("get/set", t => {
   t.plan(1);
   let client = Redis.init();
-  BsCallback.finish(
+  Callback.finish(
     Redis.set(client, "ping", "pong")
     >> (
-      (_) =>
+      _ =>
         Redis.get(client, "ping")
         >> (
           res =>
             Redis.quit(client)
             >> (
-              (_) => {
+              _ => {
                 t.equalStr(res, "pong");
-                BsCallback.return();
+                Callback.return();
               }
             )
         )

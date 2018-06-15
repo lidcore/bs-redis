@@ -1,8 +1,9 @@
-open BsCallback;
+open BsAsyncMonad;
+open BsAsyncMonad.Callback;
 
 let c = Redis.init();
 
-BsCallback.finish(
+Callback.finish(
   Redis.set(c, "bingo2", "bingo")
-  >> ((_) => Redis.quit(c) >> ((_) => BsCallback.return())),
+  >> (_ => Redis.quit(c) >> (_ => Callback.return())),
 );

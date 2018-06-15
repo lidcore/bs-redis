@@ -1,6 +1,5 @@
 {
   "name": "@lidcore/bs-redis",
-  "version": "0.0.1",
   "sources": [
     "src",
     {
@@ -8,11 +7,11 @@
       "public": []
     },
     {
-      "dir": "__tests__",
+      "dir": "tests",
       "type": "dev"
     }
   ],
-  "bs-dependencies": ["bs-callback"],
+  "bs-dependencies": ["bs-async-monad"],
   "bs-dev-dependencies": ["bs-tape"],
   "warnings": {
     "error": "+101"
